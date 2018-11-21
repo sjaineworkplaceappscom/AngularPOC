@@ -18,7 +18,7 @@
   <button
       class="k-button"
       *ngIf="savedStateExists"
-      (click)="gridSettings = mapGridSettings(persistingService.get('gridSettings'))">Load saved state</button>
+      (click)="getGridSettings()">Load saved state</button>
 </ng-template>
 <kendo-grid-column *ngFor="let col of gridSettings.columnsConfig"
   [field]="col.field"

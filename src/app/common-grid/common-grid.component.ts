@@ -135,6 +135,10 @@ export class CommonGridComponent implements OnInit {
     this.persistingService.set(this.ComponentName +'gridSettings', gridConfig);
   }
 
+  public getGridSettings():GridSettings{
+    const gridSettings: GridSettings = this.persistingService.get(this.ComponentName +'gridSettings');
+   return  this.mapGridSettings(gridSettings);
+  }
   public mapGridSettings(gridSettings: GridSettings): GridSettings {
 
     const state = gridSettings.state;
